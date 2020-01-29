@@ -1,0 +1,50 @@
+body{
+     background-color: #f8d7d7;
+}
+
+/*Cambio del color de fondo de nuestro nav*/
+.navbar-custom{
+    background-color: #A11E01;
+}
+
+/* cambiar el color del navbar brand (logo) y el color de texto*/
+.navbar-custom .navbar-brand, .navbar-custom .navbar-text {
+    color: #FFFFFF;
+}
+
+/* Cambiar el color de los links */
+.navbar-custom .navbar-nav .nav-link {
+    color: #FFFFFF;
+}
+
+/* Cambia el color de los links activos o con el cursor encima*/
+.navbar-custom .nav-item.active .nav-link, .navbar-custom .nav-item:hover .nav-link {
+    color: #FFFFFF;
+}
+
+
+/* Solo para el dropdown - cambiar el color del dropdown */
+.navbar-custom .dropdown-menu {
+    background-color: #A11E01;
+}
+.navbar-custom .dropdown-item {
+    color: #ffffff;
+}
+.navbar-custom .dropdown-item:hover,
+.navbar-custom .dropdown-item:focus {
+    color: #333333;
+    background-color: rgba(255,255,255,.5);
+}
+
+/*Cambia el color del toggler*/
+.custom-toggler.navbar-toggler {
+    border-color: #FFFFFF;
+}
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.row{
+    margin: auto;
+}

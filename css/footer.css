@@ -1,0 +1,16 @@
+.footer-custom-color{
+    background-color: #A11E01;
+}
+
+.footer-copyright{
+    background-color: #841a02;   
+}
+
+.footer-custom-color, .footer-copyright, .link{
+    color: #FFFFFF;
+}
+
+a.link:hover{
+    color: #FFFFFF;
+    text-decoration: none;
+}

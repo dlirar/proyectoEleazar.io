@@ -1,0 +1,25 @@
+/*Se define la altura 100% para hacer que la imagen utilice toda la pantalla*/
+body, html{
+height: 100%;    
+}
+
+.parallax{
+    background-image: url(../img/parallax.jpg);
+
+    /*Utilizamos todo el alto*/
+    height: 80%;
+    
+    /*Creamos el efecto de parallax scrolling*/
+    /*Establecemos si la imagen de fondo se desplaza con el resto de la página o no*/
+    background-attachment: fixed;
+    
+    /*Definimos la posición inicial de background image*/
+    background-position: center;
+    
+    /*Definimos si se va a repetir la imagen de fondo (background image) y cómo*/
+    background-repeat: no-repeat;
+    
+    /*Especificamos el tamaño de la imagen de fondo*/
+    background-size: cover;
+}
+

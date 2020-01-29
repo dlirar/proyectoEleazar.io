@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html>
+        <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="estilo.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
+        <link rel="import" href="formulario.html">
+        <title>Registro de diputados</title>
+    </head>
+    
+    <body>
+    <div class="container">
+        <div class="card card-outline-secondary">
+          <div class="card-header">
+            <h3 class="mb-0">Información de Registro</h3>
+          </div>
+          <div class="card-body">
+            <form class="form" role="form" onsubmit="compararContrasena();" method="POST" action="../controllers/registroDiputado.php">
+              <div class="form-group row">
+                <label class="col-lg-3 col-form-label form-control-label">Nombre</label>
+                <div class="col-lg-9">
+                  <input class="form-control" type="text" placeholder="Nombre" name="nombre">
+                </div>
+              </div>
+              <br/>
+              <div class="form-group row">
+                <label class="col-lg-3 col-form-label form-control-label">Apellido paterno</label>
+                <div class="col-lg-9">
+                  <input class="form-control" type="text" placeholder="Apellido paterno" name="apellidoPaterno">
+                </div>
+              </div>
+
+              <br/>
+
+                <div class="form-group row">
+                    <label class="col-lg-3 col-form-label form-control-label">Apellido materno</label>
+                    <div class="col-lg-9">
+                      <input class="form-control" type="text" placeholder="Apellido materno" name="apellidoMaterno">
+                    </div>
+                </div>    
+
+              <br/>
+
+              <div class="form-group row">
+                <label class="col-lg-3 col-form-label form-control-label">Correo</label>
+                <div class="col-lg-9">
+                  <input class="form-control" type="email" placeholder="mail@dominio.com" name="correo">
+                </div>
+              </div>
+
+              <br/>
+
+              <div class="form-group row">
+                <label class="col-lg-3 col-form-label form-control-label">Password</label>
+                <div class="col-lg-9">
+                  <input class="form-control" type="password" placeholder="Contraseña" name="contrasena" id="pass" required> 
+                    <small class="form-text text-muted" id="passwordHelpBlock">Tu contraseña debe contener al menos 8 caracteres alfanuméricos y un caracter especial.</small>
+                </div>
+              </div>
+              <br/>
+
+              <div class="form-group row">
+                <label class="col-lg-3 col-form-label form-control-label">Confirmar contraseña</label>
+                <div class="col-lg-9">
+                  <input class="form-control" type="password" placeholder="Confirmar contraseña" id="passConfirm" required>
+                </div>
+              </div>
+
+              <br/>
+
+              <div class="form-group row">
+                <label class="col-lg-3 col-form-label form-control-label"></label>
+                <div class="col-lg-9">
+                  <input class="btn btn-primary" type="submit" value="Registrar diputado" name="registro">
+                  <input class="btn btn-secondary" type="reset" value="Cancelar registro"> 
+                </div>
+              </div>
+            </form>
+          </div>
+      </div>
+    </div>
+		<script>
+			function compararContrasena(){
+				let pass = document.getElementById("pass").value;
+				let passConfirm = document.getElementById("passConfirm").value;
+				
+				//alert(pass.concat(" "+passConfirm));
+				
+				if(pass != passConfirm){
+					alert("No coinciden las contraseñas");
+					location.reload();
+					event.preventDefault();
+				}
+			}
+		</script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    </body>
+</html>
